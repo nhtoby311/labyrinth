@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="start-screen">
+        <img src="./assets/title.png" class="start-title"></img>
+        <div class="start-btn-cont">
+            <button class="start-btn">Start</button>
+            <button id="how-to-btn" class="start-btn">How to play</button>
+        </div>
+    </div>
+
+    <div class="start-dialog">
+        <p>Game settings</p>
+        <div>
+            <span>Number of player</span>
+            <input id="num-of-player" type="number" value="2">
+        </div>
+        <div>
+            <span>Number of treasures</span>
+            <input id="num-of-treausure" type="number" value="2">
+        </div>
+        <button id="start-game" class="start-btn">Start</button>
+    </div>
+
+    <div class="how-to-dialog">
+        <div class="how-to-cont">
+            <h2>How to play Labyrinth</h2>
+            <h3>Setup</h3>
+            <p>Before playing for the first time, carfefully move the maze and the character/object cards from the stamped board. Shuffle the maze cards well and then place them face upon the board to create a random maze.
+                <br><br>One maze card will be left over; this will be used during the game for moving the maze pathways. Now shuffle and deal the object cards among the players and stack them face down in front of you.
+                <br><br>Each player chooses a playing piece and places it on the same color "'stating" square.
+            </p>
+            <h3>Game Play</h3>
+            <p>On your turn, look at the top ca rd in your stack without showing it to the other players. You now have to try and get to the square showing the same picture as on your card. To do this, first insert a maze card and then move your playing piece.
+                <br><br>The youngest player goes first and play continues in a clockwise direction
+            </p>
+            <h3>Shifting The Pathways</h3>
+            <p>Along the edge of the board are 12 arrows. When it is your turn you must choose one of the arrows and then insert a maze card, which will push out a maze card at the opposite end.
+                <br><br>The card that is pushed out remains on the edge of the board until it is inserted elsewhere during the next player's turn.
+                <br><br>A maze card cannot be pushed back at the same place as the previous player pushed it out.
+                <br><br>Players must make a move within the maze when it is their turn, even if they can reach the character card they are searching for.
+                <br><br>If the player's playing piece or one of the other players playing pieces is pushed off the game board when a new maze card has been inserted,then the playing piece must be placed onto the maze card that has just been inserted at the opposite end.
+                <br><br>Moving the playing piece in this way does not count as a turn.
+            </p>
+            <h3>Moving Your Playing Piece</h3>
+            <p>After shifting the maze, move your playing piece as far as you like along the open pathway. Playing pieces can be moved onto a square that already contains another playing piece.
+                <br><br>If you are unable to reach your goal directly get into the best possible starting position for your next turn. However, moving is not compulsory so the playing piece also may be left where it is. You do not have to move if you don't want to.
+                <br><br>Once you reach your first goaI, place it face up be side your stack of cards.
+                <br><br>The next card in the pile will be your next goal.
+            </p>
+            <button id="close-btn" class="start-btn">Close</button>
+        </div>
+    </div>
+
+    <section class="game-cont">
+        <div style="display: flex; width: auto; position: relative;">
+
+            <div class="board-ghost">
+
+            </div>
+
+            <div class="board">
+            
+            </div>
+
+            <div class="extra-cell">
+
+            </div>
+            
+            
+        </div>
+    </section>
+
+    <script type="module" src="index.js"></script>
+</body>
+</html>

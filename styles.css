@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Merienda:wght@700&display=swap');
+@import './styles/board.css';
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Alfa Slab One', cursive;
+}
+
+body{
+    background: url('./assets/background.jpg');
+}
+
+.start-screen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 90;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    gap: 20px;
+    background: url('./assets/grassmaze.jpg');
+    background-size: cover;
+    transition: opacity 0.5s;
+}
+
+.start-screen.starting{
+    opacity: 0;
+}
+
+.start-title{
+
+}
+
+.start-btn-cont{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.start-btn{
+    cursor: pointer;
+    margin-top: 45px;
+    font-size: 32px;
+    color: #413701;
+    padding: 22px 90px;
+    background: linear-gradient(180deg, #FBEE01 0%, #DFBB05 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.55), inset -2px 3px 6px 4px rgba(255, 255, 255, 0.33);
+    border-radius: 17px;
+    border: none;
+}
+
+.game-cont{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+
+
+.cell{
+    width: 100%;
+    /* background: blue; */
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.board-ghost .cell{
+    position: relative;
+}
+
+.player{
+    width: 15px;
+    height: 15px;
+    background: red;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.start-dialog{
+    width: 600px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    left: calc(50% - 320px);
+    top: calc(50% - 320px);
+    z-index: 100;
+    padding: 100px 40px;
+    background: linear-gradient(180deg, #f3e703 0%, #DFBB05 100%);
+    border-radius: 16px;
+    /* border: 12px solid #413701; */
+    box-shadow: 5px 5px 15px 9px rgba(0,0,0,0.47),5px 5px 15px 9px rgba(0,0,0,0.27);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s;
+}
+
+.start-dialog.starting{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.start-dialog span{
+    font-size: 20px;
+    color: #413701;
+}
+
+.start-dialog p{
+    font-size: 35px;
+    color: #413701;
+}
+
+.start-dialog input{
+    padding: 12px 15px;
+    color: #413701;
+    font-size: 20px;
+    outline: none;
+    border-radius: 8px;
+    border: solid #413701 2px;
+}
+
+
+.how-to-dialog{
+    width: 600px;
+    height: 550px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    left: calc(50% - 320px);
+    top: calc(50% - 320px);
+    z-index: 100;
+    padding: 50px 40px;
+    background: linear-gradient(180deg, #f3e703 0%, #DFBB05 100%);
+    border-radius: 16px;
+    /* border: 12px solid #413701; */
+    box-shadow: 5px 5px 15px 9px rgba(0,0,0,0.47),5px 5px 15px 9px rgba(0,0,0,0.27);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s;
+}
+
+.how-to-dialog.starting{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.how-to-cont{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    padding: 20px 10px;
+    padding-top: 0px;
+}
+
+.how-to-cont h2{
+    font-size: 25px;
+    margin-bottom: 25px;
+    font-weight: 400;
+}
+
+.how-to-cont h3{
+    align-self: flex-start;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.how-to-cont p{
+    font-size: 18px;
+    font-family: 'Merienda', cursive;
+    margin-bottom: 20px;
+}
+
+
+.how-to-cont::-webkit-scrollbar-track
+{
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+    background-color: #fafafa38;
+}
+
+.how-to-cont::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #eaff2f81;
+}
+
+.how-to-cont::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background: #b8cc06;
+}

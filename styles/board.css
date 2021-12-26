@@ -1,0 +1,115 @@
+.board{
+    width: 600px;
+    height: 600px;
+    background: rgb(39, 26, 3); 
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 1px;
+    box-shadow: 5px 5px 15px 9px rgba(0,0,0,0.47),5px 5px 15px 9px rgba(0,0,0,0.27);
+}
+
+
+
+.board-ghost{
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    /* background: red; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 1px;
+}
+
+
+
+
+
+.cell .down,
+.cell .up,
+.cell .left,
+.cell .right{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: green;
+}
+
+.cell .down{
+    bottom: 0;
+    left: calc(50% - 10px / 2);
+}
+
+.cell .left{
+    left: 0;
+    top: calc(50% - 10px / 2);
+}
+
+.cell .right{
+    right: 0;
+    top: calc(50% - 10px / 2);
+}
+
+.cell .up{
+    top: 0;
+    left: calc(50% - 10px / 2);
+}
+
+
+.game-cont .arrow-btn{
+    position: absolute;
+    width: 40px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.game-cont .arrow-btn:hover{
+    transform: scale(1.4);
+}
+
+
+.extra-cell{
+    position: fixed;
+    display: flex;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+}
+
+
+.cell-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.moveable{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    background: rgba(15, 216, 15, 0.63);
+    cursor: pointer;
+}
+
+.treasure{
+    width: 45px;
+    height: 35px;
+    background: rgb(215, 215, 14);
+    background: url("../assets/treasure.png");
+    background-size: cover;
+    background-position: center;
+    z-index: 2;
+}
+
